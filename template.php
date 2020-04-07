@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top text-light">
@@ -42,8 +41,5 @@
             </div>
         </nav>
     </header>
-
-
 </body>
-
 </html>
