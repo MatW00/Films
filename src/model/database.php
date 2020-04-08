@@ -4,7 +4,7 @@
 $pdo = new PDO('mysql:host=localhost;dbname=wf3_croisiere', 'root', 'root', [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]);
 /*
 Effacer la ligne ci-dessus ET 'activer' celle de dessous POUR LES UTILISATEUR WINDOWS
-$pdo = new PDO('mysql:host=localhost;dbname=wf3_croisiere', 'root', 'root', [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]);
+$pdo = new PDO('mysql:host=localhost;dbname=wf3_croisiere', 'root', '', [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]);
 */
 $pdo->exec('SET CHARACTER SET utf8');
 
