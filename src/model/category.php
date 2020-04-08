@@ -14,5 +14,6 @@ function getAllCategorys()
 
     // et on retourne tout les resultats ensuite on retourne dans acceuil
     return $request->fetchAll(); 
-
 }
+
+
