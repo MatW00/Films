@@ -42,7 +42,9 @@
             </div>
         </nav>
     </header>
-
+    <div class="container">
+        <?=$content; ?>
+    </div>
 
   </body>
 </html>
