@@ -1,15 +1,10 @@
 <?php
-// Possibilité de mettre $titre = "Ajouter ou Modifier un film"
 
-// Définir la variable 'id' par rapport aux id de la table film 
+$title = 'Ajouter ou Modifier un film';
 
-// Condition de validation du formulaire de changement en POST?
-// Penser a afficher un message d'erreur ou de reussite
-
-// ouveture de la session (ob_start)
 ?>
 
-<h1>Ajouter ou Modifier un film</h1>
+<h1><?= $title; ?></h1>
 
 <!-- EMPLACEMENT FORMULAIRE  -->
 
