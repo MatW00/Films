@@ -1,12 +1,17 @@
 <?php
 // Possibilité de mettre $titre = "Ajouter ou Modifier un film"
-
+$title = "Ajouter ou Modifier un film";
 // Définir la variable 'id' par rapport aux id de la table film 
-
+$id = ($_GET["id"]) ? ($_GET["id"]) : 0;
 // Condition de validation du formulaire de changement en POST?
 // Penser a afficher un message d'erreur ou de reussite
+if (!empty($_POST)) {
+
+}
+$categorie = getAllCategorys();
 
 // ouveture de la session (ob_start)
+ob_start();
 ?>
 
 <h1>Ajouter ou Modifier un film</h1>
@@ -50,20 +55,22 @@
 
             <div class="form-group">
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="photo" name="photo">
                     <label class="custom-file-label" for="photo" data-browse="Parcourir">Affiche du film</label>
+                    <input type="file" class="custom-file-input" id="photo" name="photo">
                 </div>
             </div>
         </div>
 
         <div class="card-footer">
-            <button type="submit" class="btn btn-secondary">Enregistrer</button>
+            <button type="submit" class="btn btn-secondary" name="submit">Enregistrer</button>
+            <button class="btn btn-success" type="submit" name="update">Modifier</button>
         </div>
     </div>
 </form>
 
 <?php
 // Nettoyer le contenu (variable = ob_get_clean();)
-
+$content = ob_get_clean();
 // Require_once de template.php
+require_once "../template.php";
 ?>

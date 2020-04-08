@@ -1,8 +1,8 @@
 <?php 
 
 $title = "Detail du film";
-// $id= $_GET['id'];
-$oneFilm = getOneMovie(1);
+$id= $_GET['mov_id'];
+$oneFilm = getOneMovie($id);
 
 ob_start();
 
