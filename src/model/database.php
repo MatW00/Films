@@ -11,11 +11,11 @@ $pdo = new PDO('mysql:host=localhost;dbname=manage_movies', 'root', '', [PDO::AT
 $pdo->exec('SET CHARACTER SET utf8');
 
 // Place pour les page PHP requises pour les codes dont nous auront besoin
-
-require_once '../edit.php';
 // require_once 'LIEN.php'
 
 require_once "films.php";
 
 // 2- on inclus le nouveau fichier catalogue.php ensuite on va aller chercher la variable pdo dans catalogue.php
-require_once 'category.php';//reviens à copier/coller le code de catalogue.php
+require_once 'category.php'; //reviens à copier/coller le code de catalogue.php
+
+require_once 'recherche.php';

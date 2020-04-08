@@ -35,7 +35,9 @@
                         <a class="nav-link" href="#">Ajouter un film</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
+
+                <!-- Ajout de l'action pour atteindre la recherche en methode POST -->
+                <form class="form-inline my-2 my-lg-0" action="?p=recherche" method="POST">
                     <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
                     <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Ok</button>
                 </form>
@@ -48,6 +50,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-custom-file-input.min.js"></script>
+
     <!-- notre js -->
     <script src="assets/js/main.js"></script>
     <script>

@@ -1,5 +1,6 @@
 <?php
-require '../../model/edit.php';
+// Placer un require pour avoir acces a la database pour lancer fontion
+require_once '../../model/database.php';
 
 $title = 'Ajouter ou Modifier une catégorie';
 
@@ -7,7 +8,7 @@ $title = 'Ajouter ou Modifier une catégorie';
 
 // Condition de validation du formulaire de changement en POST?
 // Penser a afficher un message d'erreur ou de reussite
-$categories = getCategories();
+$categories = getAllCategorys();
 
 ?>
 
