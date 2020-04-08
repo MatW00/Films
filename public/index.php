@@ -14,12 +14,13 @@ if (!preg_match('/^[a-zA-Z_]*$/', $page)) {
     $page = 'accueil';
 }
 
-
+// Les expressions régulière permettent de teste le format d'une chaîne
 // S'il y a la chaine "admin_" dans cette variable
 if (strpos($page, 'admin_') !== false) {
     $page = substr($page, 6); // On supprime "admin_" de la chaîne
-    checkAdmin(); // Test si l'utilisateur est administrateur, fait une redirection si l'user n'est pas admin
-    require_once("./../src/page/admin/$page.php"); // Charge la page dans le dossier admin
+    // Bien appeler la fonction checkAdmin
+    checkAdmin(); // Test si l'utilisateur est administrateur, fait une redirection si l'user n'est pas admin.
+    require_once "./../src/page/admin/$page.php"; // Charge la page dans le dossier admin
 } else {
-    require_once("./../src/page/$page.php"); // Charge la page
+    require_once "./../src/page/$page.php"; // Charge la page
 }
