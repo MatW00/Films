@@ -45,6 +45,9 @@
                 <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
             </div>
 
+            <!-- PREVOIR DATE DE SORTIE -->
+            <!-- PREVOIR SUPPORT -->
+
             <div class="form-group">
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" id="photo" name="photo">
