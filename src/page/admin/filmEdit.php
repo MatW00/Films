@@ -1,20 +1,24 @@
 <?php
+
+// Placer un require pour avoir acces a la database pour lancer fontion
+require_once '../../model/database.php';
+
 // Possibilité de mettre $titre = "Ajouter ou Modifier un film"
 $title = "Ajouter ou Modifier un film";
 // Définir la variable 'id' par rapport aux id de la table film 
 $id = ($_GET["id"]) ? ($_GET["id"]) : 0;
+
 // Condition de validation du formulaire de changement en POST?
 // Penser a afficher un message d'erreur ou de reussite
 if (!empty($_POST)) {
-
 }
+
 $categorie = getAllCategorys();
 
 // ouveture de la session (ob_start)
-ob_start();
 ?>
 
-<h1>Ajouter ou Modifier un film</h1>
+<h1><?= $title; ?></h1>
 
 <!-- EMPLACEMENT FORMULAIRE  -->
 
@@ -70,7 +74,6 @@ ob_start();
 
 <?php
 // Nettoyer le contenu (variable = ob_get_clean();)
-$content = ob_get_clean();
+
 // Require_once de template.php
-require_once "../template.php";
 ?>

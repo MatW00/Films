@@ -16,17 +16,18 @@ ob_start();
         </div>
         <button type="submit" class="btn btn-primary btn-lg mb-2">Recherche</button>
         <select name="category" class="form-control">
-                            <option value="">categorie</option>
-                            <!-- 1-donc boucle sur les films( on a pas de variable php qui contient les flims)-->
-                            <!--1- donc requete donc on va dans model -on cree un nouveau fichier dans model movie.php-->
-                            <!-- 5- boucle ensuite on va faire un recherche donc on va rajouter toutes les films qui correspondent à la recherche donc page recherche.php-->
-                   <!-- 5   -->   <?php foreach ($categorys as $category): ?>
-             <!-- 5-->               <option value="<?=$category['cat_id']; ?>"><?=$category['cat_name']; ?></option> 
-           <!-- 5-->              <?php endforeach; ?>
-                        </select>
+            <option value="">categorie</option>
+            <!-- 1-donc boucle sur les films( on a pas de variable php qui contient les flims)-->
+            <!--1- donc requete donc on va dans model -on cree un nouveau fichier dans model movie.php-->
+            <!-- 5- boucle ensuite on va faire un recherche donc on va rajouter toutes les films qui correspondent à la recherche donc page recherche.php-->
+            <!-- 5   --> <?php foreach ($categorys as $category) : ?>
+                <!-- 5-->
+                <option value="<?= $category['cat_id']; ?>"><?= $category['cat_name']; ?></option>
+                <!-- 5--> <?php endforeach; ?>
+        </select>
     </form>
 
-    
+
     <div class="d-flex justify-content-center my-4 py-4">
         <a class="px-3" href="">Science-Fiction (nombre)</a>
         <a class="px-3" href="">Comédie (nombre)</a>
@@ -51,6 +52,7 @@ ob_start();
 
 
 </div>
-<?php $content = ob_get_clean(); //Stocke tout le code HTML dans la variable $content ?>
+<?php $content = ob_get_clean(); //Stocke tout le code HTML dans la variable $content 
+?>
 
 <?php require('../template.php'); ?>

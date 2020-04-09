@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function getAllMovies()
 {
@@ -11,7 +11,7 @@ function getAllMovies()
 
 /**
  * Recherche un film
-*/
+ */
 
 function getOneMovie($id)
 {
@@ -31,7 +31,7 @@ function getOneMovie($id)
 
 
 // Ajoute un film à notre BDD
-function addMovie($title,$poster,$actors,$plot,$files,$device,$idCategory)
+function addMovie($title, $poster, $actors, $plot, $files, $device, $idCategory)
 {
     global $pdo;
     // INSERT INTO movie (mov_title, mov_poster, mov_actors, mov_plot, mov_file_path, mov_device, category_cat_id) VALUES (:title, :poster, :actors, :plot, :file, :device, :id_category)
@@ -44,7 +44,7 @@ function addMovie($title,$poster,$actors,$plot,$files,$device,$idCategory)
     $request->bindValue(":file_path", $files);
     $request->bindValue(":device", $device);
     $request->bindValue(":id_category", $idCategory);
-    
+
     return $request->execute();
 }
 
@@ -64,15 +64,14 @@ function editMovie($title, $poster, $actors, $plot, $file_path, $device, $id_cat
     $request->bindValue(":device", $device);
     $request->bindValue(":id_category", $id_category);
     $request->bindValue(":id", $id, PDO::PARAM_INT);
-    
-    return $request->execute();
 
+    return $request->execute();
 }
 
 
 /**
  * Ajoute ou modifie un film
-*/
+ */
 
 function saveFilm($id = 0, $title, $poster = [], $actors, $plot, $file_path, $device, $idCategory, $oldPoster = null)
 {
@@ -80,7 +79,7 @@ function saveFilm($id = 0, $title, $poster = [], $actors, $plot, $file_path, $de
     $posterLink = $oldPoster;
     if ($_FILES['error']["name"] == UPLOAD_ERR_OK) {
         // Met lien pour enregistrer dans la BDD
-        $posterLink = "/uploads".uniqid().$_FILES["photo"]["name"];
+        $posterLink = "/uploads" . uniqid() . $_FILES["photo"]["name"];
     }
     // var_dump($_FILES);
 
@@ -108,8 +107,8 @@ function saveFilm($id = 0, $title, $poster = [], $actors, $plot, $file_path, $de
 
     // on execute pour savoir si la requete s'est bien passé ou pas apres destination edit
     if ($request->execute()) { // La requête n'a pas d'erreur
-    
- 
+
+
         // ensuite sur destinations dans page admin
         // ($posterLink != $oldPoster)
 
@@ -132,5 +131,3 @@ function saveFilm($id = 0, $title, $poster = [], $actors, $plot, $file_path, $de
         return ['type' => 'success', 'message' => 'La destination a bien été enregistrée'];
     }
 }
-
-?>

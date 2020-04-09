@@ -13,7 +13,5 @@ function getAllCategorys()
     $request = $pdo->query('SELECT * FROM category ORDER BY cat_name');
 
     // et on retourne tout les resultats ensuite on retourne dans acceuil
-    return $request->fetchAll(); 
+    return $request->fetchAll();
 }
-
-
