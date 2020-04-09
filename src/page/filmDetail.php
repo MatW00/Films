@@ -2,7 +2,7 @@
 
 $title = "Detail du film";
 
-$id = $_GET['mov_id'];
+$id = $_GET['id'];
 $oneFilm = getOneMovie($id);
 
 ob_start();

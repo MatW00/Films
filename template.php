@@ -32,7 +32,7 @@
                         <a class="nav-link" href="index.php?p=recherche">Catégories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?ajouterFilm">Ajouter un film</a>
+                        <a class="nav-link" href="index.php?filmEdit">Ajouter un film</a>
                     </li>
                 </ul>
 
