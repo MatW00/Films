@@ -21,7 +21,7 @@ ob_start();
 
         <div class="row no-gutters">
             <div class="col-md-2">
-                <img src="..." class="card-img" alt="...">
+            <img src="<?= $resul['mov_poster']; ?>" class="card-img" alt="<?= 'Affiche de ' . $resul['mov_title']; ?>">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
