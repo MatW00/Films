@@ -1,7 +1,8 @@
-<?php 
+<?php
 
 $title = "Detail du film";
-$id= $_GET['mov_id'];
+
+$id = $_GET['mov_id'];
 $oneFilm = getOneMovie($id);
 
 ob_start();
@@ -24,15 +25,14 @@ ob_start();
 
             <p>Acteur et Actrices : <?= $oneFilm['mov_actors'] ?></p>
 
-            
-            <a href="<?= $oneFilm['mov_file_path'] ?>">Lien vers fichier sur l'ordi</a> 
+
+            <a href="<?= $oneFilm['mov_file_path'] ?>">Lien vers fichier sur l'ordi</a>
         </div>
     </div>
 </div>
 
 
-
-
-<?php $content = ob_get_clean(); //Stocke tout le code HTML dans la variable $content ?>
+<?php $content = ob_get_clean(); //Stocke tout le code HTML dans la variable $content 
+?>
 
 <?php require('../template.php'); ?>
