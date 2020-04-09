@@ -30,9 +30,10 @@ ob_start();
                     <p class="card-text"><?= $resul['mov_plot']; ?></p>
                 </div>
             </div>
+            <!-- Liens vers les pages filmDetail et filmEdit -->
             <div class="col-md-2 mt-2">
-                <p><button type="button" class="btn btn-primary btn-lg ml-3 ">Details</button> </p>
-                <p><button type="button" class="btn btn-primary btn-lg ml-3 ">Modifier</button> </p>
+                <a href="?p=filmDetail" class="btn btn-primary btn-lg ml-3 "> Details </a>
+                <a href="?p=filmEdit" class="btn btn-primary btn-lg ml-3 "> Modifier </a>
             </div>
         </div>
     </div>
