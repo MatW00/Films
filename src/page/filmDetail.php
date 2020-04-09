@@ -12,8 +12,7 @@ ob_start();
     <div class="row">
         <div class="col-3 pt-3">
             <div class="d-flex flex-column">
-                <p class="border border-danger mx-4 text-center p-5 w-75 h-50"><img src="" alt=""> Affiche film sera remplacé par img</p>
-                <p>Date de sortie : </p>
+            <!-- <img src="<?= $oneFilm['mov_poster']; ?>" class="card-img" alt="<?= 'Affiche de ' . $oneFilm['mov_title']; ?>"> -->
                 <p>Support : PC</p>
             </div>
         </div>
