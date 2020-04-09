@@ -52,10 +52,10 @@ function addMovie($title, $poster, $actors, $plot, $files, $device, $idCategory)
 function editMovie($title, $poster, $actors, $plot, $file_path, $device, $id_category, $id)
 {
     global $pdo;
-    // UPDATE movie SET mov_title = :title, mov_poster = :poster, mov_actors = :actors, mov_plot = :plot, mov_file_path = :file_path, mov_device = :device, category_cat_id = :id_category WHERE id = :id
+    // UPDATE movie SET mov_title = :title, mov_poster = :poster, mov_actors = :actors, mov_plot = :plot, mov_file_path = :file_path, mov_device = :device, category_cat_id = :id_category WHERE mov_id = :id
     $request = $pdo->prepare("UPDATE movie 
     SET mov_title = :title, mov_poster = :poster, mov_actors = :actors, mov_plot = :plot, mov_file_path = :file_path, mov_device = :device, category_cat_id = :id_category 
-    WHERE id = :id");
+    WHERE mov_id = :id");
     $request->bindValue(":title", $title);
     $request->bindValue(":poster", $poster);
     $request->bindValue(":actors", $actors);
@@ -91,7 +91,7 @@ function saveFilm($id = 0, $title, $poster = [], $actors, $plot, $file_path, $de
     } else { // Modifie un film
         $request = $pdo->prepare("UPDATE movie 
             SET mov_title = :title, mov_poster = :poster, mov_actors = :actors, mov_plot = :plot, mov_file_path = :file_path, mov_device = :device, category_cat_id = :id_category 
-            WHERE id = :id");
+            WHERE mov_id = :id");
 
         $request->bindValue(":id", $id, PDO::PARAM_INT);
     }

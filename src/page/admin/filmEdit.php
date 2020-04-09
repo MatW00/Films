@@ -10,8 +10,8 @@ $id = ($_GET["id"]) ? ($_GET["id"]) : 0;
 
 // Condition de validation du formulaire de changement en POST?
 // Penser a afficher un message d'erreur ou de reussite
-if (!empty($_POST)) {
-}
+// if (!empty($_POST)) {
+// }
 
 $categorie = getAllCategorys();
 
