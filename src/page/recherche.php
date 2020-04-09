@@ -26,7 +26,7 @@ ob_start();
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><?= $resul['mov_title']; ?></h5>
-                    <p class="card-text"><?= $resul['mov_actor']; ?></p>
+                    <p class="card-text"><?= $resul['mov_actors']; ?></p>
                     <p class="card-text"><?= $resul['mov_plot']; ?></p>
                 </div>
             </div>
