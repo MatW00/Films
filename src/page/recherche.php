@@ -21,18 +21,19 @@ ob_start();
 
         <div class="row no-gutters">
             <div class="col-md-2">
-                <img src="..." class="card-img" alt="...">
+                <img src="<?= $resul['mov_poster']; ?>" class="card-img" alt="<?= 'Affiche de ' . $resul['mov_title']; ?>">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><?= $resul['mov_title']; ?></h5>
-                    <p class="card-text"><?= $resul['mov_actor']; ?></p>
+                    <p class="card-text"><?= $resul['mov_actors']; ?></p>
                     <p class="card-text"><?= $resul['mov_plot']; ?></p>
                 </div>
             </div>
+            <!-- Liens vers les pages filmDetail et filmEdit -->
             <div class="col-md-2 mt-2">
-                <p><button type="button" class="btn btn-primary btn-lg ml-3 ">Details</button> </p>
-                <p><button type="button" class="btn btn-primary btn-lg ml-3 ">Modifier</button> </p>
+                <a href="?p=filmDetail&mov_id=<?= $resul['mov_id']; ?>" class="btn btn-primary btn-lg ml-3 "> Details </a>
+                <a href="?p=filmEdit&mov_id=<?= $resul['mov_id']; ?>" class="btn btn-primary btn-lg ml-3 "> Modifier </a>
             </div>
         </div>
     </div>
