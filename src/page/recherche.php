@@ -32,8 +32,8 @@ ob_start();
             </div>
             <!-- Liens vers les pages filmDetail et filmEdit -->
             <div class="col-md-2 mt-2">
-                <a href="?p=filmDetail" class="btn btn-primary btn-lg ml-3 "> Details </a>
-                <a href="?p=filmEdit" class="btn btn-primary btn-lg ml-3 "> Modifier </a>
+                <a href="?p=filmDetail&id=<?=$resul["mov_id"]; ?>" class="btn btn-primary btn-lg ml-3 "> Details </a>
+                <a href="?p=filmEdit&id=" class="btn btn-primary btn-lg ml-3 "> Modifier </a>
             </div>
         </div>
     </div>
