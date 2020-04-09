@@ -38,7 +38,7 @@
 
                 <!-- Ajout de l'action pour atteindre la recherche en methode POST -->
                 <form class="form-inline my-2 my-lg-0" action="?p=recherche" method="POST">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="recherche" placeholder="Recherche" aria-label="recherche">
                     <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Ok</button>
                 </form>
             </div>
